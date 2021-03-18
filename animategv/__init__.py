@@ -17,22 +17,5 @@
 
 from __future__ import absolute_import
 
-from argparse import ArgumentParser, FileType
-from sys import stdin
-
-from gvanim import Animation, render, gif
-
-def main():
-
-	parser = ArgumentParser( prog = 'gvanim' )
-	parser.add_argument( 'animation', nargs = '?', type = FileType( 'r' ), default = stdin, help = 'The file containing animation commands (default: stdin)' )
-	parser.add_argument( '--delay', '-d', default = '100', help = 'The delay (in ticks per second, default: 100)' )
-	parser.add_argument( 'basename', help = 'The basename of the generated file' )
-	args = parser.parse_args()
-
-	ga = Animation()
-	ga.parse( args.animation )
-	gif( render( ga.graphs(), args.basename, 'png' ), args.basename, args.delay )
-
-if __name__ == '__main__':
-	main()
+from animategv.animation import Animation
+from animategv.render import render, gif

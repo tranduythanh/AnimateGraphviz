@@ -19,7 +19,7 @@ class NextStep( object ):
 	def __init__( self, clean = False ):
 		self.clean = clean
 	def __call__( self, steps ):
-		from gvanim.animation import Step
+		from animategv.animation import Step
 		steps.append( Step( None if self.clean else steps[ -1 ] ) )
 
 class AddNode( object ):

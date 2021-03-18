@@ -20,7 +20,7 @@ from __future__ import absolute_import
 from email.utils import quote
 import shlex
 
-from gvanim import action
+from animategv import action
 
 class ParseException( Exception ):
 	pass
@@ -72,6 +72,9 @@ class Animation( object ):
 
 	def __init__( self ):
 		self._actions = []
+		# https: // graphviz.org/doc/info/attrs.html  # k:rankdir
+		# "TB", "LR", "BT", "RL"
+		self._rankdir = 'TB';
 
 	def next_step( self, clean = False ):
 		self._actions.append( action.NextStep( clean ) )
@@ -105,6 +108,9 @@ class Animation( object ):
 
 	def remove_edge( self, u, v ):
 		self._actions.append( action.RemoveEdge( u, v ) )
+	
+	def set_direction(self, dir):
+		self._rankdir = dir
 
 	def parse( self, lines ):
 		action2method = {

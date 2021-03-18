@@ -17,8 +17,8 @@
 
 import unittest
 
-from gvanim.animation import Step
-import gvanim.action as ga
+from animategv.animation import Step
+import animategv.action as ga
 
 class TestActions( unittest.TestCase ):
 	def setUp(self):

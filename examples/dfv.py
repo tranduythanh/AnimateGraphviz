@@ -17,7 +17,7 @@
 
 from random import sample
 
-from gvanim import Animation, render, gif
+from animategv import Animation, render, gif
 
 N = range( 6 )
 K = 3
@@ -25,6 +25,7 @@ K = 3
 G = dict( ( v, sample( N, K ) ) for v in N )
 
 ga = Animation()
+ga.set_direction("LR")
 for v, adj in G.items():
     for u in adj:
         ga.add_edge( v, u )

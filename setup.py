@@ -5,16 +5,16 @@ def read( path ):
 		return f.read()
 
 setup(
-	name = 'GraphvizAnim',
-	version = '1.1.0',
-	description = 'A tool to create animated graph visualizations, based on graphviz',
+	name = 'AnimateGraphViz',
+	version = '1.1.1',
+	description = 'A tool to create animated graph visualizations, based on graphviz, based on legacy source code of gvanim - Massimo Santini',
 	long_description = read('README.md'),
 	long_description_content_type='text/markdown',
-	author = 'Massimo Santini',
-	author_email = 'santini@di.unimi.it',
-	url = 'https://github.com/mapio/GraphvizAnim',
+	author = 'Tran Duy Thanh',
+	author_email = 'coachtranduythanh@gmail.com',
+	url = 'https://github.com/tranduythanh/GraphvizAnim',
 	license = 'GNU/GPLv3',
-	packages = ['gvanim'],
+	packages = ['animategv'],
 	keywords = 'drawing graph animation',
 	classifiers = [
 		'Development Status :: 5 - Production/Stable',

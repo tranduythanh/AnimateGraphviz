@@ -24,7 +24,7 @@ from shutil import rmtree
 from IPython.display import Image
 import ipywidgets as widgets
 
-from gvanim import render
+from animategv import render
 
 def interactive( animation, size = 320 ):
 	basedir = mkdtemp()

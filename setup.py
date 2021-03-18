@@ -12,7 +12,7 @@ setup(
 	long_description_content_type='text/markdown',
 	author = 'Tran Duy Thanh',
 	author_email = 'coachtranduythanh@gmail.com',
-	url = 'https://github.com/tranduythanh/GraphvizAnim',
+	url = 'https://github.com/tranduythanh/AnimateGraphViz',
 	license = 'GNU/GPLv3',
 	packages = ['animategv'],
 	keywords = 'drawing graph animation',

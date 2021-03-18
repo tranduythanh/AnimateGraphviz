@@ -1,1 +1,1 @@
-GraphvizAnim
+AnimateGraphViz

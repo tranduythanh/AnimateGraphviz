@@ -3,5 +3,7 @@ dist/
 __pycache__/
 .DS_Store
 AnimateGraphViz.egg-info
-GraphvizAnim.egg-info
+AnimateGraphViz.egg-info
 build
+*.png
+*.gif
